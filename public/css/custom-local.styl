@@ -1,0 +1,62 @@
+body {
+  background: transparent !important;
+}
+
+.ace_editor {
+  .ace_sb {
+    opacity: 0.2;
+    transition: opacity 0.5s;
+  }
+  
+  &:hover .ace_sb {
+    opacity: 1
+  }
+}
+
+#filename > span {
+  box-shadow: none;
+  background: transparent;
+}
+
+#editor {
+  box-shadow: none;
+  right: 67%;
+}
+
+#preview {
+  left: 33%;
+  box-shadow: 0 -1px 10px #f1f1e7;
+  border-left: 1px solid #f1f1e7;
+  padding: 3em 10em;
+  font-size: 1.8em;
+  line-height: 1.5em;
+  &, * {
+    font-family: 'PT Serif';
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Raleway;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  
+  h1 {
+    margin-bottom: 2.5em;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
+  
+  p {
+    font-size: inherit;
+    line-height: inherit;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
