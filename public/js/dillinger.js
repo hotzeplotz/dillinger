@@ -63,8 +63,7 @@ $(function(){
     , 'twilight': '#534746'
     , 'vibrant_ink': '#363636'
     }
-      
-      
+  
   /// UTILS =================
   
 
@@ -259,7 +258,7 @@ $(function(){
       
       initUi()
       
-      converter = new Showdown.converter()
+      // converter = new Showdown.converter()
       
       bindPreview()
 
@@ -464,11 +463,12 @@ $(function(){
   function previewMd(){
     
     var unmd = editor.getSession().getValue()
-      , md = converter.makeHtml(unmd)
+      , mdunmd = rst2mdown(unmd)
+      , md = marked(unmd);//converter.makeHtml(unmd);
     
     $preview
       .html('') // unnecessary?
-      .html(md)
+      .html(md);
       
   }
 

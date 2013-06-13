@@ -3,6 +3,7 @@ var fs = require('fs')
   , request = require('request')
   , qs = require('querystring')
   , markdown = require('node-markdown').Markdown
+  , rst2md = require('rst2mdown')
   // , phantomjs = require('phantomjs')
   // , child = require('child_process')
 
@@ -13,7 +14,9 @@ exports.Core = (function(){
   }
   
   function _getHtml(str){
-    return markdown(str) 
+    var markdown_str = rst2mdown(str);
+    console.log(markdown_str);
+    return markdown(markdown_str);
   }
 
   return {
